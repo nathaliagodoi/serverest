@@ -1,0 +1,25 @@
+{
+  "name": "serverest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "open:dev": "cypress open --env ENV=dev",
+    "headless:dev": "cypress run --env ENV=dev",
+    "api:dev": "npm run headless:dev -- --spec 'cypress/e2e/backend'",
+    "ui:dev": "npm run headless:dev -- --spec 'cypress/e2e/frontend'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.16.1",
+    "cypress-grep": "^2.6.1",
+    "cypress-iframe": "^1.0.1",
+    "fs": "^0.0.1-security",
+    "genson-js": "^0.0.8"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.0.2",
+    "mochawesome": "^7.1.3"
+  }
+}
